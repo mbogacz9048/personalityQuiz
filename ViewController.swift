@@ -1,5 +1,5 @@
 //
-//  ResultsViewController.swift
+//  ViewController.swift
 //  personalityQuiz
 //
 //  Created by Matt Bogacz on 3/7/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
