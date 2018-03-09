@@ -11,14 +11,26 @@ import UIKit
 class QuestionsViewController: UIViewController {
     
     @IBOutlet weak var singleStackView: UIStackView!
-    
     @IBOutlet weak var multipleStackView: UIStackView!
-    
     @IBOutlet weak var rangedStackView: UIStackView!
-    
     @IBOutlet weak var progressView: UIProgressView!
-    
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var singleStackb1: UIButton!
+    @IBOutlet weak var singleStackb2: UIButton!
+    @IBOutlet weak var singleStackb3: UIButton!
+    @IBOutlet weak var multipleLabel2: UILabel!
+    @IBOutlet weak var multipleLabel1: UILabel!
+    @IBOutlet weak var RangedLabel2: UILabel!
+    @IBOutlet weak var RangedLabel1: UILabel!
+    @IBOutlet weak var MultipleSwitch4: UISwitch!
+    @IBOutlet weak var multipleLabel4: UILabel!
+    @IBOutlet weak var MultipleSwitch3: UISwitch!
+    @IBOutlet weak var MultipleLabel3: UILabel!
+    @IBOutlet weak var multipleSwitch2: UISwitch!
+    @IBOutlet weak var multipleSwitch1: UISwitch!    
+    @IBOutlet weak var singleStackb4: UIButton!
+    
+    
     
     var questionsIndex = 0
     var questions: [Question] = [

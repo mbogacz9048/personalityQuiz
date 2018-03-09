@@ -242,11 +242,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="82z-kM-E4S"/>
                     <connections>
+                        <outlet property="MultipleLabel3" destination="Iw3-BD-W95" id="jug-k9-WSh"/>
+                        <outlet property="MultipleSwitch3" destination="hii-vl-117" id="TsW-rF-RK7"/>
+                        <outlet property="MultipleSwitch4" destination="hew-wk-3Og" id="QfB-s8-wid"/>
+                        <outlet property="RangedLabel1" destination="JjJ-Mx-2PS" id="e1g-hI-gcI"/>
+                        <outlet property="RangedLabel2" destination="ZfA-Z6-RF6" id="ed9-AF-zhe"/>
+                        <outlet property="multipleLabel1" destination="duQ-4l-uaQ" id="auO-lJ-2Zd"/>
+                        <outlet property="multipleLabel2" destination="vYL-wW-47H" id="ZM2-rF-4zV"/>
+                        <outlet property="multipleLabel4" destination="Bgk-on-4V6" id="0FE-mB-d0e"/>
                         <outlet property="multipleStackView" destination="XdI-zZ-MgR" id="bk7-KX-psX"/>
+                        <outlet property="multipleSwitch1" destination="gcX-Am-dXg" id="Z3c-R4-2PL"/>
+                        <outlet property="multipleSwitch2" destination="b3b-yS-goh" id="N9b-Qy-EsF"/>
                         <outlet property="progressView" destination="oxu-Yw-uSi" id="79o-Xu-XZK"/>
                         <outlet property="questionLabel" destination="FIO-cd-Vol" id="onL-xa-6zo"/>
                         <outlet property="rangedStackView" destination="y70-hz-JiP" id="Gec-z6-T7f"/>
                         <outlet property="singleStackView" destination="tEz-gi-AKI" id="Kbd-SC-Svo"/>
+                        <outlet property="singleStackb1" destination="CKe-UE-Wad" id="zts-ud-bHB"/>
+                        <outlet property="singleStackb2" destination="hHd-Nu-17q" id="ZEb-TX-RFQ"/>
+                        <outlet property="singleStackb3" destination="hbG-Qw-sTS" id="ds4-td-YBZ"/>
+                        <outlet property="singleStackb4" destination="9MF-lD-uiA" id="IYG-5o-ds7"/>
                         <segue destination="li4-VW-Gu2" kind="show" id="thN-2C-4G2"/>
                     </connections>
                 </viewController>
