@@ -9,6 +9,17 @@
 import UIKit
 
 class QuestionsViewController: UIViewController {
+    
+    @IBOutlet weak var singleStackView: UIStackView!
+    
+    @IBOutlet weak var multipleStackView: UIStackView!
+    
+    @IBOutlet weak var rangedStackView: UIStackView!
+    
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    
     var questionsIndex = 0
     var questions: [Question] = [
         Question(text: "Which food do you like the most?",
@@ -45,6 +56,21 @@ class QuestionsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    func updateUI() {
+        singleStackView.isHidden = true
+        multipleStackView.isHidden = true
+        rangedStackView.isHidden = true
+        
+        let currentQuestion = questions[questionsIndex]
+        let currentAnswers = currentQuestion.answers
+        
+        let totalProgress = Float(questionsIndex)/Float(questions.count)
+        
+        navigationItem.title = "Questions #\(questionsIndex + 1)"
+        questionLabel.text = currentQuestion.text
+        progressView.setProgress(totalProgress, animated: true)
+        
     }
 
     override func didReceiveMemoryWarning() {

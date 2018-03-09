@@ -18,14 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5a1854f1c22e9__700-png" translatesAutoresizingMaskIntoConstraints="NO" id="NZx-fv-3M5">
-                                <rect key="frame" x="-162.5" y="149" width="700" height="368"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐱🐶🐢🐰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXv-0B-NTr">
+                                <rect key="frame" x="79" y="303" width="216" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personality Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4Y-g4-lpc">
+                                <rect key="frame" x="125" y="373" width="124" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT9-jh-EAi">
+                                <rect key="frame" x="150" y="449" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NZx-fv-3M5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="E8b-xx-4jq"/>
-                            <constraint firstItem="NZx-fv-3M5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cX7-YA-htZ"/>
+                            <constraint firstItem="zXv-0B-NTr" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6KN-DH-JrU"/>
+                            <constraint firstItem="zXv-0B-NTr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NZe-SR-bo4"/>
+                            <constraint firstItem="x4Y-g4-lpc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c40-zZ-mrA"/>
+                            <constraint firstItem="x4Y-g4-lpc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="50" id="oZr-pk-s1P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -35,7 +53,4 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="5a1854f1c22e9__700-png" width="700" height="368"/>
-    </resources>
 </document>

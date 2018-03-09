@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Inital View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="InitalViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="personalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,22 +189,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="y70-hz-JiP">
-                                <rect key="frame" x="20" y="308.5" width="134" height="50.5"/>
+                                <rect key="frame" x="20" y="308.5" width="138" height="50.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bIY-SU-7Ln">
-                                        <rect key="frame" x="-2" y="0.0" width="138" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="142" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j46-CH-0yz">
-                                        <rect key="frame" x="0.0" y="30" width="134" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="30" width="138" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-Mx-2PS">
-                                                <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-Mx-2PS">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfA-Z6-RF6">
-                                                <rect key="frame" x="92" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="96" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -226,6 +226,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vYL-wW-47H" firstAttribute="leading" secondItem="bIY-SU-7Ln" secondAttribute="trailing" constant="-128" id="9ls-yE-Rcv"/>
                             <constraint firstItem="XdI-zZ-MgR" firstAttribute="top" secondItem="ruY-T3-tDc" secondAttribute="top" constant="207" id="9wQ-sV-El0"/>
                             <constraint firstItem="fww-Mt-2kY" firstAttribute="centerY" secondItem="uBb-Fg-7GL" secondAttribute="centerY" id="D3K-LA-Omb"/>
                             <constraint firstItem="FIO-cd-Vol" firstAttribute="top" secondItem="ruY-T3-tDc" secondAttribute="top" constant="20" id="MdF-lH-YbE"/>
@@ -238,22 +239,20 @@
                             <constraint firstItem="ruY-T3-tDc" firstAttribute="trailing" secondItem="FIO-cd-Vol" secondAttribute="trailing" constant="20" id="uBW-oY-j1v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ruY-T3-tDc"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="fww-Mt-2kY"/>
-                                <exclude reference="XdI-zZ-MgR"/>
-                                <exclude reference="y70-hz-JiP"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="82z-kM-E4S"/>
                     <connections>
+                        <outlet property="multipleStackView" destination="XdI-zZ-MgR" id="bk7-KX-psX"/>
+                        <outlet property="progressView" destination="oxu-Yw-uSi" id="79o-Xu-XZK"/>
+                        <outlet property="questionLabel" destination="FIO-cd-Vol" id="onL-xa-6zo"/>
+                        <outlet property="rangedStackView" destination="y70-hz-JiP" id="Gec-z6-T7f"/>
+                        <outlet property="singleStackView" destination="tEz-gi-AKI" id="Kbd-SC-Svo"/>
                         <segue destination="li4-VW-Gu2" kind="show" id="thN-2C-4G2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsc-EM-1FD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176.80000000000001" y="135.38230884557723"/>
+            <point key="canvasLocation" x="55" y="137"/>
         </scene>
         <!--Results-->
         <scene sceneID="GOi-Wi-acL">
