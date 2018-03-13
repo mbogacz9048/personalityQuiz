@@ -27,9 +27,9 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var MultipleSwitch3: UISwitch!
     @IBOutlet weak var MultipleLabel3: UILabel!
     @IBOutlet weak var multipleSwitch2: UISwitch!
-    @IBOutlet weak var multipleSwitch1: UISwitch!    
+    @IBOutlet weak var multipleSwitch1: UISwitch!
     @IBOutlet weak var singleStackb4: UIButton!
-    
+    @IBOutlet weak var RangeSlider: UISlider!
     
     
     var questionsIndex = 0
@@ -66,6 +66,7 @@ class QuestionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
 
         // Do any additional setup after loading the view.
     }
@@ -83,8 +84,49 @@ class QuestionsViewController: UIViewController {
         questionLabel.text = currentQuestion.text
         progressView.setProgress(totalProgress, animated: true)
         
+        
+        
+        switch currentQuestion.type {
+        case .single :
+            updateSingleStack(using: currentAnswers)
+        case .multiple:
+            updateMultipleStack(using: currentAnswers)
+        case .ranged:
+            updateRangedStack(using: currentAnswers)
+        
+        }
+        
+    }
+    func nextQuestion() {
+        questionsIndex += 1
+        if questionsIndex < questions.count {
+            updateUI()
+        } else {
+            performSegue(withIdentifier: "resultSegue", sender: nil)
+        }
+    
+    }
+    
+    func updateSingleStack(using answers: [Answer]) {
+        singleStackView.isHidden = false
+        singleStackb1.setTitle(answers[0].text, for: .normal)
+        singleStackb2.setTitle(answers[1].text, for: .normal)
+        singleStackb3.setTitle(answers[2].text, for: .normal)
+        singleStackb4.setTitle(answers[3].text, for: .normal)
     }
 
+    func updateMultipleStack(using answers: [Answer]) {
+        multipleStackView.isHidden = false
+        multipleLabel1.text = answers[0].text
+        multipleLabel2.text = answers[1].text
+        MultipleLabel3.text = answers[2].text
+        multipleLabel4.text = answers[3].text
+    }
+    func updateRangedStack(using answers: [Answer]) {
+        rangedStackView.isHidden = false
+        RangedLabel1.text = answers.first?.text
+        RangedLabel2.text = answers.last?.text
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

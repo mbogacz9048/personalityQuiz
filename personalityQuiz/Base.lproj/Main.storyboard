@@ -82,7 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="Z6z-Gi-1FD" kind="show" identifier="resultSegue" id="Sox-iF-4mE"/>
+                        <segue destination="Z6z-Gi-1FD" kind="show" identifier="initialSegue" id="Sox-iF-4mE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -245,6 +245,7 @@
                         <outlet property="MultipleLabel3" destination="Iw3-BD-W95" id="jug-k9-WSh"/>
                         <outlet property="MultipleSwitch3" destination="hii-vl-117" id="TsW-rF-RK7"/>
                         <outlet property="MultipleSwitch4" destination="hew-wk-3Og" id="QfB-s8-wid"/>
+                        <outlet property="RangeSlider" destination="bIY-SU-7Ln" id="G6l-MS-OEU"/>
                         <outlet property="RangedLabel1" destination="JjJ-Mx-2PS" id="e1g-hI-gcI"/>
                         <outlet property="RangedLabel2" destination="ZfA-Z6-RF6" id="ed9-AF-zhe"/>
                         <outlet property="multipleLabel1" destination="duQ-4l-uaQ" id="auO-lJ-2Zd"/>
@@ -261,7 +262,7 @@
                         <outlet property="singleStackb2" destination="hHd-Nu-17q" id="ZEb-TX-RFQ"/>
                         <outlet property="singleStackb3" destination="hbG-Qw-sTS" id="ds4-td-YBZ"/>
                         <outlet property="singleStackb4" destination="9MF-lD-uiA" id="IYG-5o-ds7"/>
-                        <segue destination="li4-VW-Gu2" kind="show" id="thN-2C-4G2"/>
+                        <segue destination="li4-VW-Gu2" kind="show" identifier="resultSegue" id="thN-2C-4G2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsc-EM-1FD" userLabel="First Responder" sceneMemberID="firstResponder"/>
