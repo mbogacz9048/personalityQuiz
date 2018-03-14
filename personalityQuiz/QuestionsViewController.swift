@@ -10,6 +10,8 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
     
+    var answerChosen: [Answer] = []
+    
     @IBOutlet weak var singleStackView: UIStackView!
     @IBOutlet weak var multipleStackView: UIStackView!
     @IBOutlet weak var rangedStackView: UIStackView!
@@ -127,20 +129,42 @@ class QuestionsViewController: UIViewController {
         RangedLabel1.text = answers.first?.text
         RangedLabel2.text = answers.last?.text
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
+        let currentAnswers = questions[questionsIndex].answers
+        
+        switch  sender {
+        case singleStackb1:
+      answerChosen.append(currentAnswers[0])
+        case singleStackb2:
+            answerChosen.append(currentAnswers[1])
+        case singleStackb3:
+            answerChosen.append(currentAnswers[2])
+        case singleStackb4:
+            answerChosen.append(currentAnswers[3])
+        default:
+            break
+        }
+        nextQuestion()
+    }
+    
+    @IBAction func multipleButtonPressed() {
+        let currentAnswers = questions[questionsIndex].answers
+        if multipleSwitch1.isOn {
+            answerChosen.append(currentAnswers[0])
+        }
+        if multipleSwitch2.isOn {
+            answerChosen.append(currentAnswers[1])
+        }
+        if MultipleSwitch3.isOn {
+            answerChosen.append(currentAnswers[2])
+        }
+        if MultipleSwitch4.isOn {
+            answerChosen.append(currentAnswers[3])
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
