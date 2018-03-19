@@ -18,5 +18,8 @@ class InitialViewController: UIViewController {
     @IBAction func beginButtonPushed(_ sender: UIButton) {
         performSegue(withIdentifier: "initialSegue", sender: nil)
     }
+    @IBAction func UnwindToQuizIntroduction (segue: UIStoryboardSegue) {
+        
+    }
 }
 

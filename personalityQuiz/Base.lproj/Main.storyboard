@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -204,22 +205,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="y70-hz-JiP">
-                                <rect key="frame" x="20" y="308.5" width="138" height="50.5"/>
+                                <rect key="frame" x="20" y="308.5" width="184" height="50.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bIY-SU-7Ln">
-                                        <rect key="frame" x="-2" y="0.0" width="142" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="188" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j46-CH-0yz">
-                                        <rect key="frame" x="0.0" y="30" width="138" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="30" width="184" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-Mx-2PS">
-                                                <rect key="frame" x="0.0" y="0.0" width="76" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="122" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfA-Z6-RF6">
-                                                <rect key="frame" x="96" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="142" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -234,20 +235,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oxu-Yw-uSi">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oxu-Yw-uSi">
                                 <rect key="frame" x="112" y="645" width="150" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoV-43-OCc">
+                                <rect key="frame" x="40" y="367" width="140" height="30"/>
+                                <state key="normal" title="Submit Answer"/>
+                                <connections>
+                                    <action selector="rangedAnswerButtonPressed" destination="ODF-ZJ-0iD" eventType="touchUpInside" id="xv0-hp-O0w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oxu-Yw-uSi" firstAttribute="top" secondItem="GoV-43-OCc" secondAttribute="bottom" constant="248" id="3rM-Mh-plB"/>
                             <constraint firstItem="vYL-wW-47H" firstAttribute="leading" secondItem="bIY-SU-7Ln" secondAttribute="trailing" constant="-128" id="9ls-yE-Rcv"/>
                             <constraint firstItem="fww-Mt-2kY" firstAttribute="centerY" secondItem="uBb-Fg-7GL" secondAttribute="centerY" id="D3K-LA-Omb"/>
                             <constraint firstItem="FIO-cd-Vol" firstAttribute="top" secondItem="ruY-T3-tDc" secondAttribute="top" constant="20" id="MdF-lH-YbE"/>
+                            <constraint firstItem="oxu-Yw-uSi" firstAttribute="leading" secondItem="uBb-Fg-7GL" secondAttribute="leadingMargin" constant="96" id="NR3-2C-CcB"/>
                             <constraint firstItem="XdI-zZ-MgR" firstAttribute="centerY" secondItem="uBb-Fg-7GL" secondAttribute="centerY" id="Xu9-0S-tqR"/>
+                            <constraint firstItem="GoV-43-OCc" firstAttribute="leading" secondItem="ruY-T3-tDc" secondAttribute="leading" constant="40" id="agJ-eI-0sK"/>
                             <constraint firstItem="y70-hz-JiP" firstAttribute="leading" secondItem="ruY-T3-tDc" secondAttribute="leading" constant="20" id="ber-KN-abQ"/>
                             <constraint firstItem="y70-hz-JiP" firstAttribute="centerY" secondItem="uBb-Fg-7GL" secondAttribute="centerY" id="cDK-83-7qj"/>
+                            <constraint firstItem="ruY-T3-tDc" firstAttribute="trailing" secondItem="GoV-43-OCc" secondAttribute="trailing" constant="195" id="fIP-Sw-xwW"/>
+                            <constraint firstItem="oxu-Yw-uSi" firstAttribute="centerX" secondItem="FIO-cd-Vol" secondAttribute="centerX" id="j9U-TH-QIq"/>
                             <constraint firstItem="FIO-cd-Vol" firstAttribute="leading" secondItem="ruY-T3-tDc" secondAttribute="leading" constant="20" id="k4S-bL-Uyb"/>
+                            <constraint firstItem="GoV-43-OCc" firstAttribute="top" secondItem="y70-hz-JiP" secondAttribute="bottom" constant="8" id="o7g-yX-GBk"/>
                             <constraint firstItem="ruY-T3-tDc" firstAttribute="trailing" secondItem="XdI-zZ-MgR" secondAttribute="trailing" constant="20" id="sE7-eO-tnC"/>
                             <constraint firstItem="fww-Mt-2kY" firstAttribute="leading" secondItem="ruY-T3-tDc" secondAttribute="leading" constant="20" id="ss6-pv-Xj2"/>
                             <constraint firstItem="ruY-T3-tDc" firstAttribute="trailing" secondItem="FIO-cd-Vol" secondAttribute="trailing" constant="20" id="uBW-oY-j1v"/>
@@ -257,7 +270,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="fww-Mt-2kY"/>
-                                <exclude reference="y70-hz-JiP"/>
+                                <exclude reference="XdI-zZ-MgR"/>
                             </mask>
                         </variation>
                     </view>
@@ -325,6 +338,9 @@
                                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <segue destination="IE0-8N-qah" kind="unwind" unwindAction="UnwindToQuizIntroductionWithSegue:" id="Izq-Co-ev5"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -338,8 +354,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qwo-mt-BmH"/>
                     </view>
+                    <connections>
+                        <outlet property="resultDefinition" destination="Kcq-UO-VNy" id="DcA-eJ-ToZ"/>
+                        <outlet property="resultsAnswerLabel" destination="9zm-Bu-j6E" id="7x4-AO-e4U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AfO-ED-6PZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IE0-8N-qah" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="917.60000000000002" y="136.28185907046478"/>
         </scene>
